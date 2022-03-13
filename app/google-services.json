@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "655556890008",
+    "project_id": "clube-8d72e",
+    "storage_bucket": "clube-8d72e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655556890008:android:bfa93094feb801393dafed",
+        "android_client_info": {
+          "package_name": "com.example.clube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655556890008-i28jltllar8fitqm718kgbl09dlbknbi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clube",
+            "certificate_hash": "cbbbf31e55c877cea5e3533e9644785b2c80b304"
+          }
+        },
+        {
+          "client_id": "655556890008-b8l8rlad6g43k1e0ujivbvvg4td2pm6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggOtCslTvShRx9eSYT25mqAzWtSJuuoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655556890008-b8l8rlad6g43k1e0ujivbvvg4td2pm6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
