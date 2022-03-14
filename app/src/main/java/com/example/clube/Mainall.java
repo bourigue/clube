@@ -50,8 +50,7 @@ public class Mainall extends AppCompatActivity {
 
                         fragment = new searchFragment();
                         break;
-
-        }
+                   }
 
                 loadFragment(fragment);
             }
