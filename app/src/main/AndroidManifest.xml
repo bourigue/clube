@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clube">
         <activity
+            android:name=".commentActivity"
+            android:exported="false" />
+        <activity
             android:name=".Mainall"
             android:exported="false" />
         <activity

@@ -44,7 +44,7 @@ public class Mainall extends AppCompatActivity {
                         break;
                     case 2:
 
-                        fragment = new favoriteFragment();
+                        fragment = new searchFragment();
                         break;
                     case 3:
 

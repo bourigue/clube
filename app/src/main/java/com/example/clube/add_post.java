@@ -179,7 +179,7 @@ public class add_post extends AppCompatActivity {
                         String idpost=databaseReference.push().getKey();
                         String user=FirebaseAuth.getInstance().getUid();
                         firebaseHomeUri = uri.toString();
-                        Poste upload = new Poste(ImageName.getText().toString().trim(),firebaseHomeUri,idpost,user);
+                        Poste upload = new Poste(ImageName.getText().toString().trim(),firebaseHomeUri,user,idpost);
                         String uploadId = databaseReference.push().getKey();
                         databaseReference.child(uploadId).setValue(upload);
                      //   progressDialog.setVisibility(View.INVISIBLE);
