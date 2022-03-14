@@ -23,15 +23,13 @@
                 android:paddingRight="15dp"
                 android:gravity="center"
                 >
-                     <TextView
-                    android:id="@+id/poster"
+                <ImageView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="Club CSC"
-                    android:textSize="30sp"
-                      />
+                    android:src="@drawable/logo"
+                    />
+
 
             </RelativeLayout>
          </androidx.appcompat.widget.Toolbar>

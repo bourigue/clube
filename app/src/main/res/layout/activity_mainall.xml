@@ -18,10 +18,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation3"
         android:layout_gravity="bottom"
-        app:mbn_backgroundBottomColor="#E274F4"
+        app:mbn_backgroundBottomColor="@color/colorButton"
         app:mbn_circleColor="#FBF9F9"
 
-        app:mbn_selectedIconColor="#E274F4"
+        app:mbn_selectedIconColor="@color/colorButton"
         app:mbn_defaultIconColor="#FBF9F9"
 
         />

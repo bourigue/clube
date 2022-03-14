@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".add_post">
+    tools:context=".add_post"
+
+    android:gravity="center"
+    >
 
     <TextView
         android:id="@+id/textview"
@@ -17,34 +20,47 @@
         android:textStyle="bold" />
 
     <ImageView
+        android:id="@+id/ShowImageView"
         android:layout_width="fill_parent"
         android:layout_height="200dp"
-        android:id="@+id/ShowImageView"
+
         android:layout_below="@+id/textview"
-        android:layout_marginTop="20dp"/>
+        android:background="@drawable/carde"
+        android:layout_margin="10dp" />
 
     <Button
         android:id="@+id/ButtonChooseImage"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ShowImageView"
-        android:layout_marginTop="20dp"
-        android:text="Choose Image" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/carde"
+        android:padding="20dp"
+        android:text="Choose Image"
+        android:textColor="@color/colorButton"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/ImageNameEditText"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/ButtonChooseImage"
         android:layout_marginTop="20dp"
         android:gravity="center"
+        android:background="@drawable/carde"
         android:hint="Enter Image description Here" />
 
     <Button
         android:id="@+id/ButtonUploadImage"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ImageNameEditText"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Upload image to Firebase Storage" />
+        android:background="@drawable/roundedbutton"
+        android:text="Add the post"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 </RelativeLayout>

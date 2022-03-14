@@ -48,7 +48,7 @@ public class Mainall extends AppCompatActivity {
                         break;
                     case 3:
 
-                        fragment = new searchFragment();
+                        fragment = new addPostFragment();
                         break;
                    }
 
