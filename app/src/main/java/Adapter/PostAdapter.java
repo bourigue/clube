@@ -1,6 +1,7 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.example.clube.Poste;
 import com.example.clube.R;
 import com.example.clube.User;
+import com.example.clube.commentActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -54,7 +56,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
        // publisherinfo(holder.usename,holder.publisher, post.getpublisher());
         islikes (post.getpostid(), holder.like);
         nrLikes(holder.likes,post.getpostid());
-
+        getComments(post.getpostid(),holder.comment);
 
 
         holder.like.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +80,15 @@ FirebaseDatabase.getInstance().getReference().
         });
 
 
+        holder.comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (mcontext, commentActivity.class);
+                intent.putExtra ("postid", post.getpostid());
+                intent.putExtra ("publisherid", post.getpublisher());
+                mcontext.startActivity (intent);
+            }
+        });
 
 
 
@@ -153,6 +164,28 @@ FirebaseDatabase.getInstance().getReference().
             }
         });
     }
+    private void getComments (String postid, TextView comments){
+
+        DatabaseReference reference = FirebaseDatabase.getInstance() .getReference ().child("Comments").child(postid);
+reference.addValueEventListener(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot snapshot) {
+        comments.setText ("View All "+snapshot.getChildrenCount () + " Comments");
+
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError error) {
+
+    }
+});
+
+
+
+
+
+    }
+
 
 //    public void publisherinfo(final TextView username,final TextView publisher,final String userid){
 //
