@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
@@ -17,40 +17,44 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerview"
-        android:layout_below="@id/toolbar"/>
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/bottom"
+        />
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/bottom"
-        android:background="#fff"
-        android:padding="4dp"
-        android:layout_alignParentBottom="true">
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/image_profile"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightof="@id/image_profile"
-        android:hint="Add a comment..."
-        android:id="@+id/add_comment"
-        android:layout_centerVertical="true"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
-    android:background="8android:color/transparent" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/post"
-        android:layout_marginEnd="5dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        />
-</RelativeLayout>
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/image_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <EditText
+            android:id="@+id/add_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Add a comment..." />
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:text="poste" />
+    </RelativeLayout>
 
 
 
