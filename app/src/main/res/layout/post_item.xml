@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/carde"
-    android:layout_margin="9dp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/white"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
     >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        >
 
 
         <LinearLayout
+            android:id="@+id/linearLayoutProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -30,8 +34,8 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:text="ADMIN"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -40,22 +44,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="9dp"
-            android:textSize="20sp"
-            android:textColor="#020101"
+            android:layout_below="@+id/linearLayoutProfile"
             android:text="this the diectiption"
+            android:textColor="#020101"
+            android:textSize="20sp"
 
             />
 
         <ImageView
             android:id="@+id/poste_image"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-
-            />
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/description_post"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp" />
 
         <RelativeLayout
+            android:id="@+id/RVLike"
+            android:layout_below="@id/poste_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp">
@@ -65,6 +74,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
+
                 android:src="@drawable/ic_favor" />
 
             <ImageView
@@ -80,6 +90,7 @@
 
         <TextView
             android:id="@+id/likes"
+            android:layout_below="@id/RVLike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -87,6 +98,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:layout_below="@id/likes"
             android:id="@+id/publisher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,16 +106,15 @@
             android:textStyle="bold" />
 
         <TextView
+            android:layout_below="@id/publisher"
             android:id="@+id/comment"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:textColor="#80090707"
-            android:textStyle="bold"
             android:layout_marginBottom="9dp"
-            />
+            android:textColor="#80090707"
+            android:textStyle="bold" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

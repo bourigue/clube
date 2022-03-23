@@ -91,7 +91,7 @@ private void addComment() {
 
                 User user = snapshot.getValue (User.class);
 
-                Glide.with(getApplicationContext ()).load (user.getimageurl()).into (image_profile);
+                //Glide.with(getApplicationContext ()).load (user.getimageurl()).into (image_profile);
             }
 
             @Override
