@@ -13,19 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clube">
         <activity
+            android:name=".start"
+            android:exported="false" />
+        <activity
             android:name=".commentActivity"
             android:exported="false" />
         <activity
             android:name=".Mainall"
-            android:exported="false" />
-        <activity
-            android:name=".MainAll"
-            android:exported="false" />
-        <activity
-            android:name=".all"
-            android:exported="false"
-            android:label="@string/title_activity_all"
-            android:theme="@style/Theme.Clube.NoActionBar" />
+            android:exported="false" >
+
+
+
+        </activity>
+
+
         <activity
             android:name=".addpost"
             android:exported="false" />
@@ -40,7 +41,15 @@
             android:exported="false" />
         <activity
             android:name=".login"
-            android:exported="false" />
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".register"
             android:exported="false" />
@@ -48,13 +57,9 @@
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
-            android:name=".start"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".splashscreen"
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

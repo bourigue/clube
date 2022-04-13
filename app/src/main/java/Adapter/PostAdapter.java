@@ -160,8 +160,7 @@ FirebaseDatabase.getInstance().getReference().
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+    }
         });
     }
     private void getComments (String postid, TextView comments){
@@ -171,7 +170,6 @@ reference.addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
         comments.setText ("View All "+snapshot.getChildrenCount () + " Comments");
-
     }
 
     @Override

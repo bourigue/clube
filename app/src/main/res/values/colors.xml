@@ -3,7 +3,10 @@
  <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#C87272</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="back">#E8BBBB</color>
     <color name="colorButton">#009f06</color>
+   <color name="gray_efecec">#ffefecec</color>
+
 </resources>

@@ -73,7 +73,7 @@ public class login extends AppCompatActivity {
                                  @Override
                                  public void onDataChange(@NonNull DataSnapshot snapshot) {
                                      pd.dismiss();
-                                     Intent i=new Intent(login.this,MainActivity.class);
+                                     Intent i=new Intent(login.this,Mainall.class);
                                      i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                      startActivity(i);
                                      pd.dismiss();

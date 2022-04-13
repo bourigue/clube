@@ -28,10 +28,8 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 public class add_post extends AppCompatActivity {
 
@@ -209,5 +207,4 @@ public class add_post extends AppCompatActivity {
     }
 
 
-
-    }
+}
