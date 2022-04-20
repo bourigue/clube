@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- <color name="purple_700">#FF3700B3</color>
+ <color name="purple_700">#ff7930</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="back">#E8BBBB</color>
-    <color name="colorButton">#009f06</color>
+    <color name="colorButton">#ff7930</color>
    <color name="gray_efecec">#ffefecec</color>
 
 </resources>

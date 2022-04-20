@@ -4,12 +4,9 @@
 
 
     >
-    <solid android:color="#B8CABE" />
+    <solid android:color="@color/colorButton" />
     <corners
-        android:bottomLeftRadius="20dp"
-        android:bottomRightRadius="20dp"
-
-        android:topLeftRadius="20dp"
+       android:radius="80dp"
         />
 
 

@@ -1,9 +1,11 @@
 package Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -14,6 +16,8 @@ import Adapter.PostAdapter;
 
 import com.example.clube.Poste;
 import com.example.clube.R;
+import com.example.clube.login;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +33,8 @@ public class FragmentHome extends Fragment {
     private PostAdapter postAdapter;
     private List<Poste> posteLists;
     private List<String> followingList;
+    FirebaseAuth auth;
+    ImageView logout;
     public FragmentHome() {
     }
 
@@ -46,6 +52,16 @@ public class FragmentHome extends Fragment {
         posteLists=new ArrayList<>();
         postAdapter=new PostAdapter(getContext(),posteLists);
         recyclerView.setAdapter(postAdapter);
+        logout=view.findViewById(R.id.logout);
+        auth= FirebaseAuth.getInstance();
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.signOut();
+                startActivity(new Intent(getContext(), login.class));
+                getActivity().finish();
+            }
+        });
 
         readpost();
         return view;

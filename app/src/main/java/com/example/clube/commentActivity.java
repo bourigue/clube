@@ -123,14 +123,12 @@ private void addComment() {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+         }
         });
 
 
     }
         private void readcomment(){
-
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("Comments").child(postid);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -139,9 +137,7 @@ private void addComment() {
                 for (DataSnapshot snapshot : datasnapshot.getChildren ()){
                     comments comment=snapshot.getValue(comments.class);
                     commentList.add(comment);
-
-
-            }
+               }
 
                 commentAdapter.notifyDataSetChanged();
             }

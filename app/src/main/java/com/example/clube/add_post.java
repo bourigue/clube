@@ -198,7 +198,7 @@ public class add_post extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-               // progressBarUniversite.setVisibility(View.INVISIBLE);
+               // progressDialog.setVisibility(View.INVISIBLE);
 
                 Toast.makeText(add_post.this, "Uploading Failed2 !!", Toast.LENGTH_SHORT).show();
             }

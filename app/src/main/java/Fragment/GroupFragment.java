@@ -1,5 +1,6 @@
 package Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,12 +16,17 @@ import android.widget.Toast;
 
 import com.example.clube.R;
 import com.example.clube.User;
+import com.example.clube.add_message;
+import com.example.clube.add_post;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.Nullable;
 
@@ -41,11 +47,11 @@ public class GroupFragment extends Fragment {
     private FirebaseAuth mAuth;
     private String currentGroupName, currentUserid, currentUserName, currentDate, currentTime;
     private FirebaseAuth auth;
+    private FloatingActionButton fab;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
     }
@@ -69,6 +75,9 @@ public class GroupFragment extends Fragment {
         currentUserid = mAuth.getCurrentUser().getUid();
         usersRefs = FirebaseDatabase.getInstance().getReference().child("Users");
         recyclerView.setAdapter(groupAdapter);
+        fab=view.findViewById(R.id.fab);
+        addmessageFloatbutton();
+
         getuserinfo();
 
 
@@ -76,7 +85,10 @@ public class GroupFragment extends Fragment {
     }
     public void readpost(String currentGroupName){
          groupNameRef = FirebaseDatabase.getInstance().getReference().child("Groups").child(currentGroupName);
-         groupNameRef.addValueEventListener(new ValueEventListener() {
+
+        Query qyer=groupNameRef.orderByChild("order").limitToLast(100);
+
+        qyer.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 groupLists.clear();
@@ -86,9 +98,10 @@ public class GroupFragment extends Fragment {
                     String date=snapshot1.child("date").getValue(String.class);
                     String time=snapshot1.child("time").getValue(String.class);
                     String from=snapshot1.child("from").getValue(String.class);
-                    Groups group=new Groups(message,date,time,name,from);
+                    int order=snapshot1.child("order").getValue(int.class);
+
+                    Groups group=new Groups(message,date,time,name,from,order);
                     groupLists.add(group);
-                    Toast.makeText(getContext(), from, Toast.LENGTH_SHORT).show();
 
                 }
                 groupAdapter.notifyDataSetChanged();
@@ -104,8 +117,7 @@ public class GroupFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    currentGroupName = snapshot.child("groupname").getValue().toString();
-                    Toast.makeText(getContext(), currentGroupName, Toast.LENGTH_SHORT).show();
+                    currentGroupName = snapshot.child("groupName").getValue().toString();
                     readpost(currentGroupName);
 
                 }
@@ -116,6 +128,18 @@ public class GroupFragment extends Fragment {
 
             }
         });
+    }
+    private void addmessageFloatbutton(){
+
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getContext(), add_message.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 

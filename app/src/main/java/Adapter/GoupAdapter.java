@@ -44,24 +44,20 @@ public class GoupAdapter extends RecyclerView.Adapter<GoupAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull GoupAdapter.ViewHolder holder, int position) {
         Groups group= groupList.get(position);
-        Toast.makeText(mcontext, group.getMessage(), Toast.LENGTH_SHORT).show();
 
-
-        Toast.makeText(mcontext, group.getFrom(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(mcontext, "kkkkkkkkkkkkkkkkkkkk"+mykey, Toast.LENGTH_SHORT).show();
         if (mykey.equals(group.getFrom())) {
 
             holder.lyMessageOutText.setVisibility(View.VISIBLE);
             holder.lyMessageInText.setVisibility(View.GONE);
-
             holder.mydisplayMessage.setText(group.getMessage());
             holder.mytime.setText(group.getTime());
-
+            Toast.makeText(mcontext, group.getName(), Toast.LENGTH_SHORT).show();
         } else {
             holder.lyMessageInText.setVisibility(View.VISIBLE);
             holder.lyMessageOutText.setVisibility(View.GONE);
             holder.displayMessage.setText(group.getMessage());
             holder.time.setText(group.getTime());
+            holder.myname.setText(group.getName());
         }
     }
 
@@ -73,6 +69,9 @@ public class GoupAdapter extends RecyclerView.Adapter<GoupAdapter.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageButton sendMessage;
         private EditText userMessageInput;
+        private TextView myname;
+        private TextView myname2;
+
         private TextView time;
         private TextView displayMessage;
         private TextView mytime;
@@ -89,6 +88,7 @@ public class GoupAdapter extends RecyclerView.Adapter<GoupAdapter.ViewHolder>{
             mykey=auth.getCurrentUser().getUid();
             lyMessageInText=itemView.findViewById(R.id.other_message);
             lyMessageOutText=itemView.findViewById(R.id.my_message);
+            myname=itemView.findViewById(R.id.myname);
 
        }
     }

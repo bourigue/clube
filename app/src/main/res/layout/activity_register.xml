@@ -13,54 +13,96 @@
         android:orientation="vertical">
 
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/adduser"
+            android:layout_marginTop="20dp"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:id="@+id/firstname"
-            android:hint="enter first name"
-            android:inputType="text"
-            />
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B7CFCECE"
+            android:backgroundTintMode="src_over"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#CDCACA" />
+        <EditText
             android:id="@+id/lastname"
-            android:hint="enter last name"
-            android:inputType="text"
-            />
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B7CFCECE"
+            android:backgroundTintMode="src_over"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#CDCACA" />
+        <EditText
             android:id="@+id/email"
-            android:hint="enter email"
-            android:inputType="textEmailAddress"
-            />
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B7CFCECE"
+            android:backgroundTintMode="src_over"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#CDCACA" />
+        <EditText
             android:id="@+id/password"
-            android:hint="enter password"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B7CFCECE"
+            android:backgroundTintMode="src_over"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#CDCACA" />
 
+        <Spinner
+            android:id="@+id/group"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
 
 
 
         <Button
             android:id="@+id/registred_button"
-            android:layout_marginTop="50dp"
-            android:layout_width="wrap_content"
-            android:background="@color/black"
-            android:layout_height="40dp"
-            android:text="register"/>
-
-        <TextView
-            android:id="@+id/textLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="you have account "
-            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            android:layout_width="301dp"
+            android:layout_height="56dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:text="register"
+            android:background="@drawable/custombutton"
+            android:backgroundTint="#07635D"
+            android:fontFamily="serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
 
 
 

@@ -30,6 +30,12 @@
                     android:src="@drawable/logo"
                     />
 
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_logout" />
+
 
             </RelativeLayout>
          </androidx.appcompat.widget.Toolbar>

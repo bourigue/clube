@@ -9,17 +9,21 @@
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/carde.xml" value="0.2708333333333333" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/chat_msg_env.xml" value="0.2" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/chat_msg_recv.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/custombutton.xml" value="0.2708333333333333" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/his_msg_bg.xml" value="0.23425925925925925" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.2515625" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2515625" />
+        <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/loginback.xml" value="0.19907407407407407" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/my_msg_bg.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/drawable/roundedbutton.xml" value="0.2657407407407407" />
+        <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_add_message.xml" value="0.2546875" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_add_post.xml" value="0.25" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_add_universite.xml" value="0.2390625" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_addpost.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_chat.xml" value="0.1" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_comment.xml" value="0.23541666666666666" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_group.xml" value="0.21875" />
+        <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_group_send_message.xml" value="0.1359375" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_login.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/rachi/AndroidStudioProjects/clube/app/src/main/res/layout/activity_main2.xml" value="0.25" />

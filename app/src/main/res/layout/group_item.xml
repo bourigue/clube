@@ -17,13 +17,13 @@
         android:padding="3dp">
 
         <TextView
+            android:id="@+id/myname"
 
-            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
 
-            android:text="rachid" />
+           />
 
         <TextView
             android:id="@+id/display"
@@ -62,11 +62,10 @@
 
         <TextView
 
-            android:id="@+id/myname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="rachid" />
+           />
 
         <TextView
             android:id="@+id/mydisplay"

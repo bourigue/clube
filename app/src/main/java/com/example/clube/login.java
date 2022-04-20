@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class login extends AppCompatActivity {
     EditText firstname,lastname,email,password;
     Button login;
-    TextView text_registred;
+
     FirebaseAuth auth;
     ProgressDialog pd;
     DatabaseReference reference;
@@ -36,17 +37,11 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        text_registred=findViewById(R.id.textregister);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
         login=findViewById(R.id.login_button);
         auth=FirebaseAuth.getInstance();
-        text_registred.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(login.this,register.class));
-            }
-        });
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,6 +103,16 @@ public class login extends AppCompatActivity {
         Intent registerpage=new Intent(login.this,register.class);
         startActivity(registerpage);
 
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if(currentUser != null){
+            Intent i=new Intent(login.this,Mainall.class);
+            startActivity(i);
+        }
     }
 
 }
