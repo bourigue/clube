@@ -52,5 +52,5 @@ Now it contains all the screen, thanks for your love and support 🙏
 ![HomeUsers9](https://user-images.githubusercontent.com/96108341/175792603-e528b402-d213-45f9-8473-00fb4bd55977.png)
 ![HomePage10](https://user-images.githubusercontent.com/96108341/175792608-5809aca7-758b-4707-82f2-471eff2a864e.png)
 ![addMessage11](https://user-images.githubusercontent.com/96108341/175792610-925459d0-90cf-49c7-975e-a62f18bfd52f.png)
-![addMessage11](https://user-images.githubusercontent.com/96108341/175792616-53e9734e-0a13-4c1f-a84c-4577be519717.png)
+
 
