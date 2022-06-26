@@ -8,9 +8,6 @@ grows, it will be difficult to manage all this information.
 
 ## [Watch it on YouTube](https://www.youtube.com/watch?v=HNgR3Z2GgLY&ab_channel=rachidbourigue)
 
-**Packages we are using:**
-
-- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
 ### Video Preview of Final UI
 ![Uploading ![Uploading Comp 1_1.gif…]()
