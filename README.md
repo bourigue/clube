@@ -10,7 +10,8 @@ grows, it will be difficult to manage all this information.
 
 
 ### Video Preview of Final UI
-![clubevideo_r5qzXU5h](https://user-images.githubusercontent.com/96108341/176246622-965fe2eb-5a8f-449a-90c2-93eb51e1ab01.gif)
+
+###![clubevideo_r5qzXU5h](https://user-images.githubusercontent.com/96108341/176246622-965fe2eb-5a8f-449a-90c2-93eb51e1ab01.gif)
 ## Screens it contains:
 
 => splash
